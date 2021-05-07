@@ -1,1 +1,19 @@
 <p>footer-index works!</p>
+
+
+<table style="width:100%">
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th> 
+      <th>Edad</th>
+      <th>cedula</th>
+      <th>Editar</th>
+    </tr>
+    <tr *ngFor="let usuario of listaUsuarios">
+      <td>{{usuario.nombre}}</td>
+      <td>{{usuario.apellido}}</td>
+      <td>{{usuario.edad}}</td>
+      <td>{{usuario.cedula}}</td>
+      <td><a (click)="EventoEditarUsuario(usuario)">Click para editar usuario</a></td>
+    </tr>
+  </table>
